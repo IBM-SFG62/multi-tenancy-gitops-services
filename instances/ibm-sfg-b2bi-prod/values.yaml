@@ -250,7 +250,7 @@ integrations:
       claims:
         name: itxa-nfs-claim
     sso:
-      host: "i.itzroks-664003h6xc-j7zjr5-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
+      host: "i.itzroks-664003h6xc-hds8iv-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud"
       port: 443
       ssl:
         enabled: true
@@ -275,7 +275,7 @@ setupCfg:
 
   # Provide the DB attributes
   dbVendor: db2
-  dbHost: 172.21.124.123
+  dbHost: 172.21.37.2
   dbPort: 50000
   dbData: B2BIDB
   dbDrivers: db2jcc4.jar
@@ -510,7 +510,7 @@ asi:
     
   ingress:
     internal:
-      host: "asi-b2bi-prod.itzroks-664003h6xc-j7zjr5-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
+      host: "asi-b2bi-prod.itzroks-664003h6xc-hds8iv-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud"
       tls:
         enabled: true
         secretName: ""
@@ -520,7 +520,7 @@ asi:
       #    servicePort: "my-http"
       #    enableHttps: false
     external:
-      host: "itzroks-664003h6xc-j7zjr5-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
+      host: "itzroks-664003h6xc-hds8iv-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud"
       tls:
         enabled: true
         secretName: ""
@@ -785,7 +785,7 @@ ac:
       
   ingress:
     internal:
-      host: "ac-b2bi-prod.itzroks-664003h6xc-j7zjr5-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
+      host: "ac-b2bi-prod.itzroks-664003h6xc-hds8iv-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud"
       tls:
         enabled: true
         secretName: ""
@@ -795,7 +795,7 @@ ac:
       #    servicePort: "my-http"
       #    enableHttps: false
     external:
-      host: "itzroks-664003h6xc-j7zjr5-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
+      host: "itzroks-664003h6xc-hds8iv-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud"
       tls:
         enabled: true
         secretName: ""
@@ -1031,7 +1031,7 @@ api:
 
   ingress:
     internal:
-      host: "api-b2bi-prod.itzroks-664003h6xc-j7zjr5-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
+      host: "api-b2bi-prod.itzroks-664003h6xc-hds8iv-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud"
       tls:
         enabled: true
         secretName: ""
