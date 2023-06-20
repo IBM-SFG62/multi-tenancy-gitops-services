@@ -14,4 +14,4 @@ configMapGenerator:
   behavior: create
   files:
   - configmap/LwEncryption.jar
-  - configmap/customer_LW_license.properties
+  # - configmap/customer_LW_license.properties
