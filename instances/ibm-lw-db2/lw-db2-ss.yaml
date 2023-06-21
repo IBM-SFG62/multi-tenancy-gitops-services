@@ -35,14 +35,6 @@ spec:
           env:
             - name: LICENSE
               value: accept
-            # - name: DB2INSTANCE
-            #   value: db2inst1
-            # - name: DB2INST1_PASSWORD
-            #   value: db2inst1
-          # service:
-          #     name: db2-lw-lb
-          #     type: LoadBalancer
-          #     port: 50000
           ports:
             - containerPort: 22
               protocol: TCP
