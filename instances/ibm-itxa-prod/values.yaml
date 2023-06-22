@@ -9,21 +9,21 @@
 
 global:
   # Change the values license to true to indicate acceptance of license https://ibm.biz/Bdfpad
-  license: false
+  license: true
   image:
-    #repository: "image-registry.openshift-image-registry.svc:5000/itxa"
-    repository: "cp.icr.io/ibm-itxa"
-    pullsecret: "er-secret"
-  appSecret: "itxa-oracle-secrets"
-  tlskeystoresecret: ""
+    repository: "image-registry.openshift-image-registry.svc:5000/b2bi-prod"
+    #repository: "cp.icr.io/ibm-itxa"
+    #pullsecret: "ibm-entitlement-key"
+  appSecret: "itxa-db2-secrets"
+  tlskeystoresecret: "tls-keystore-secret"
   secureDBConnection:
     enabled: false
     dbservercertsecretname: ""
   database:
-    dbvendor: oracle
+    dbvendor: db2
     s3host: "s3.us-east.cloud-object-storage.appdomain.cloud"
-    s3bucket: "nditxa"
-    s3objectkey: "ojdbc8.jar"
+    s3bucket: "itxa-db2"
+    s3objectkey: "db2jcc4.jar"
   serviceAccountName:
   # Example:
   # envs:
@@ -54,7 +54,7 @@ global:
     itxaUI:
       enabled: false
     itxadbinit:
-      enabled: false
+      enabled: true
   nginxTimeout: "10m"
   autoscaling:
     enabled: true
@@ -67,9 +67,9 @@ itxauiserver:
   # runAsUser applicable only to non OCP clusters.
   runAsUser: 1001
   image:
-    name: itxa-ui-server
-    tag: 10.0.1.7_APR_04_04_6
-    #digest: sha256:f3fd11644f93efcaddabb1955cbc95ece0ee833f6e40e9a645f01792b455ec70
+    name: itxa-ui-server-oci
+    tag: itxa-ui-server-oci-june21
+    digest: sha256:52a2542eaa9b2b377026efdbfb144d8fc9a3cc2daa63e6c4d8943a3c6621128a
     pullPolicy: IfNotPresent
   config:
     #vendor: websphere
@@ -93,18 +93,18 @@ itxauiserver:
       nodePort: 30452
   resources:
     requests:
-      ephemeral-storage: 2560Mi
+      #ephemeral-storage: 2560Mi
       memory: 2560Mi
       cpu: 1
     limits:
-      ephemeral-storage: 3840Mi
+      #ephemeral-storage: 3840Mi
       memory: 3840Mi
       cpu: 2
   ingress:
     enabled: true
-    host: ""
+    host: "itxa.itzroks-664003h6xc-z2t6sc-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
     ssl:
-      enabled: true
+      enabled: false
       secretname: "itxa-ingress-secret"
     controller: nginx
     contextRoots: ["spe", "adminCenter"]
@@ -150,12 +150,12 @@ itxauiserver:
   userSecret: "itxa-user-secret"
 
 itxadatasetup:
-  dbType: "oracle"
+  dbType: "db2"
   #deployPacks - if flag is set to true, will pass the path of respective pack jar to spedeploy-packs.sh and spedbinit-container.sh to deploy and load the pack into database.
   deployPacks:
-    edi: true
-    fsp: true
-    hc: true
+    edi: false
+    fsp: false
+    hc: false
   tenantId: ""
   ignoreVersionWarning: true
   #migrateDB:
@@ -170,7 +170,7 @@ itxadbinit:
   # runAsUser applicable only to non OCP clusters.
   runAsUser: 1001
   image:
-    name: itxa-init-db
-    tag: 10.0.1.7_APR_04_04_6
-    #digest: sha256:ba59515d78e591d1cf19afb14ebf198a65c802a2f06e1c78ad8842ea1d4d114f
+    name: itxa-init-db-plus-packs
+    #tag: itxa-init-db-plus-packs-june21
+    digest: sha256:2eaa29a4fa76c2e920563ef43ac1736aa3cacf151c208a8ec06634284f34f6f2
     pullPolicy: IfNotPresent

@@ -242,7 +242,7 @@ integrations:
       digest: "sha256:d6dea7cad255582d091f91c7ab226d819ce105a4146b9ac706d96262dd929afc"
       pullPolicy: IfNotPresent
       pullSecret: "ibm-entitlement-key"
-    appSecret: "itxa-oracle-secrets"
+    appSecret: "itxa-db2-secrets"
     secureDBConnection:
       enabled: false
       dbservercertsecretname: ""
@@ -250,7 +250,7 @@ integrations:
       claims:
         name: itxa-nfs-claim
     sso:
-      host: "i.itzroks-664003h6xc-z2t6sc-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
+      host: "itxa.itzroks-664003h6xc-z2t6sc-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
       port: 443
       ssl:
         enabled: true
