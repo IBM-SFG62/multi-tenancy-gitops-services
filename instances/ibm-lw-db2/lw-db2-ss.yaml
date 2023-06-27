@@ -56,23 +56,23 @@ spec:
               mountPath: /hadr
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
-  # volumeClaimTemplates:
-  #   - metadata:
-  #       name: ibm-sfg-db2-1
-  #     spec:
-  #       accessModes: [ "ReadWriteOnce" ]
-  #       storageClassName: "ibmc-file-gold-gid"
-  #       resources:
-  #         requests:
-  #           storage: 1Gi
-  #   - metadata:
-  #       name: ibm-sfg-db2-2
-  #     spec:
-  #       accessModes: [ "ReadWriteOnce" ]
-  #       storageClassName: "ibmc-file-gold-gid"
-  #       resources:
-  #         requests:
-  #           storage: 1Gi
+  volumeClaimTemplates:
+    - metadata:
+        name: ibm-sfg-db2-1
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        storageClassName: "ibmc-file-gold-gid"
+        resources:
+          requests:
+            storage: 1Gi
+    - metadata:
+        name: ibm-sfg-db2-2
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        storageClassName: "ibmc-file-gold-gid"
+        resources:
+          requests:
+            storage: 1Gi
       # restartPolicy: Always
       # dnsPolicy: ClusterFirst
   # strategy:
