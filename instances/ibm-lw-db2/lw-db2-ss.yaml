@@ -30,7 +30,7 @@ spec:
         - name: ibm-sfg-db2
           securityContext:
             privileged: true
-          image: quay.io/repository/rdecoster/lw-db
+          image: quay.io/repository/rdecoster/lw-db:v1.0
           imagePullPolicy: IfNotPresent
           env:
             - name: LICENSE
