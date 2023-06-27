@@ -1,3 +1,4 @@
 resources:
-- ./lw-db2-ss.yaml
-- ./lw-db2-svc.yaml
+# - ./lw-db2-ss.yaml
+# - ./lw-db2-svc.yaml
+- ./drop-fw-job.yaml
