@@ -35,6 +35,9 @@ spec:
           env:
             - name: LICENSE
               value: accept
+            - name: PASSWORD
+              value: db2inst1
+
           ports:
             - containerPort: 22
               protocol: TCP
