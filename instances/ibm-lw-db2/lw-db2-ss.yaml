@@ -35,7 +35,7 @@ spec:
           env:
             - name: LICENSE
               value: accept
-            - name: PASSWORD
+            - name: DB2INST1_PASSWORD
               value: db2inst1
 
           ports:
