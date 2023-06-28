@@ -449,7 +449,8 @@ asi:
     annotations: {}  
   
   backendService:
-    type: LoadBalancer
+    # type: LoadBalancer
+    type: NodePort
     # Supported values are "ClientIP" & "None". Default is "None".
     sessionAffinity: None
     #override session affinity timeout configuration (applicable when sessionAffinity is configured other than "None")
@@ -520,7 +521,7 @@ asi:
       #    servicePort: "my-http"
       #    enableHttps: false
     external:
-      host: "itzroks-664003h6xc-z2t6sc-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
+      host: ""
       tls:
         enabled: true
         secretName: ""
@@ -738,7 +739,8 @@ ac:
     annotations: {}  
       
   backendService:
-    type: LoadBalancer
+    # type: LoadBalancer
+    type: NodePort
     # Supported values are "ClientIP" & "None". Default is "None".
     sessionAffinity: None
     #override session affinity timeout configuration (applicable when sessionAffinity is configured other than "None")
@@ -795,7 +797,7 @@ ac:
       #    servicePort: "my-http"
       #    enableHttps: false
     external:
-      host: "itzroks-664003h6xc-z2t6sc-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
+      host: ""
       tls:
         enabled: true
         secretName: ""
