@@ -438,7 +438,7 @@ asi:
         port: 35007
         targetPort: rest-adapter
         nodePort: 30007
-        protocol: TCP            
+        protocol: TCP
     extraPorts: []
       #-name: http-1
       # port: 46000
@@ -468,26 +468,26 @@ asi:
         targetPort: 30201
         nodePort: 30201
         protocol: TCP
-    portRanges:
-      - name: adapters
-        portRange: 30301-30310
-        targetPortRange: 30301-30310
-        nodePortRange: 30301-30310
-        protocol: TCP
+    portRanges: []
+      # - name: adapters
+      #   portRange: 30301-30307
+      #   targetPortRange: 30301-30307
+      #   nodePortRange: 30301-30307
+      #   protocol: TCP
     loadBalancerIP:  
     annotations: {}
       
   livenessProbe:
-    initialDelaySeconds: 600
-    timeoutSeconds: 300
-    periodSeconds: 600
+    initialDelaySeconds: 60
+    timeoutSeconds: 30
+    periodSeconds: 60
 
   # command - command to be executed 
   # arg1, arg2.. - command arguments
   readinessProbe:
-    initialDelaySeconds: 600
-    timeoutSeconds: 500
-    periodSeconds: 600
+    initialDelaySeconds: 60
+    timeoutSeconds: 50
+    periodSeconds: 60
     command:
     arg: []
       #- arg1
@@ -495,8 +495,8 @@ asi:
      
   startupProbe:
     initialDelaySeconds: 30
-    timeoutSeconds: 300
-    periodSeconds: 600
+    timeoutSeconds: 30
+    periodSeconds: 60
     failureThreshold: 5
        
   internalAccess:
@@ -521,7 +521,7 @@ asi:
       #    servicePort: "my-http"
       #    enableHttps: false
     external:
-      host: ""
+      host: "ex-asi-b2bi-prod.itzroks-664003h6xc-z2t6sc-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
       tls:
         enabled: true
         secretName: ""
@@ -769,13 +769,13 @@ ac:
 
   livenessProbe:
     initialDelaySeconds: 60
-    timeoutSeconds: 500
-    periodSeconds: 600
+    timeoutSeconds: 50
+    periodSeconds: 60
     
   readinessProbe:
     initialDelaySeconds: 60
-    timeoutSeconds: 500
-    periodSeconds: 600
+    timeoutSeconds: 50
+    periodSeconds: 60
     command:
     arg: []
       #- arg1
@@ -797,7 +797,7 @@ ac:
       #    servicePort: "my-http"
       #    enableHttps: false
     external:
-      host: ""
+      host: "ex-ac-b2bi-prod.itzroks-664003h6xc-z2t6sc-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
       tls:
         enabled: true
         secretName: ""
@@ -1010,13 +1010,13 @@ api:
   
   livenessProbe:
     initialDelaySeconds: 60
-    timeoutSeconds: 500
-    periodSeconds: 600
+    timeoutSeconds: 50
+    periodSeconds: 60
     
   readinessProbe:
     initialDelaySeconds: 60
-    timeoutSeconds: 500
-    periodSeconds: 600
+    timeoutSeconds: 50
+    periodSeconds: 60
     command:
     arg: []
       #- arg1
