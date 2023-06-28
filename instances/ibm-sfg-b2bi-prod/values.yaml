@@ -468,7 +468,7 @@ asi:
         targetPort: 30201
         nodePort: 30201
         protocol: TCP
-    portRanges: []
+    portRanges:
       - name: adapters
         portRange: 30301-30310
         targetPortRange: 30301-30310
