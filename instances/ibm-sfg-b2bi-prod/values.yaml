@@ -469,11 +469,11 @@ asi:
         nodePort: 30201
         protocol: TCP
     portRanges: []
-      #- name: adapters
-      #  portRange: 30301-30400
-      #  targetPortRange: 30301-30400
-      #  nodePortRange: 30301-30400
-      #  protocol: TCP
+      - name: adapters
+        portRange: 30301-30310
+        targetPortRange: 30301-30310
+        nodePortRange: 30301-30310
+        protocol: TCP
     loadBalancerIP:  
     annotations: {}
       
