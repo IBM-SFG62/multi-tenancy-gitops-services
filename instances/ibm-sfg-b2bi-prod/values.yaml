@@ -478,25 +478,25 @@ asi:
     annotations: {}
       
   livenessProbe:
-    initialDelaySeconds: 60
-    timeoutSeconds: 30
-    periodSeconds: 60
+    initialDelaySeconds: 6000
+    timeoutSeconds: 300
+    periodSeconds: 6000
 
   # command - command to be executed 
   # arg1, arg2.. - command arguments
   readinessProbe:
-    initialDelaySeconds: 60
-    timeoutSeconds: 5
-    periodSeconds: 60
+    initialDelaySeconds: 6000
+    timeoutSeconds: 500
+    periodSeconds: 6000
     command:
     arg: []
       #- arg1
       #- arg2
      
   startupProbe:
-    initialDelaySeconds: 300
-    timeoutSeconds: 30
-    periodSeconds: 60
+    initialDelaySeconds: 3000
+    timeoutSeconds: 300
+    periodSeconds: 6000
     failureThreshold: 5
        
   internalAccess:
@@ -768,14 +768,14 @@ ac:
     annotations: {} 
 
   livenessProbe:
-    initialDelaySeconds: 60
-    timeoutSeconds: 5
-    periodSeconds: 60
+    initialDelaySeconds: 6000
+    timeoutSeconds: 500
+    periodSeconds: 6000
     
   readinessProbe:
-    initialDelaySeconds: 60
-    timeoutSeconds: 5
-    periodSeconds: 60
+    initialDelaySeconds: 6000
+    timeoutSeconds: 500
+    periodSeconds: 6000
     command:
     arg: []
       #- arg1
@@ -1009,14 +1009,14 @@ api:
     annotations: {}  
   
   livenessProbe:
-    initialDelaySeconds: 60
-    timeoutSeconds: 5
-    periodSeconds: 60
+    initialDelaySeconds: 6000
+    timeoutSeconds: 500
+    periodSeconds: 6000
     
   readinessProbe:
-    initialDelaySeconds: 60
-    timeoutSeconds: 5
-    periodSeconds: 60
+    initialDelaySeconds: 6000
+    timeoutSeconds: 500
+    periodSeconds: 6000
     command:
     arg: []
       #- arg1
