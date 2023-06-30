@@ -313,20 +313,20 @@ setupCfg:
   #JMS properties are optional if jmsVendor is empty
   #To use IBMMQ for communication between ASI & AC, change property to jmsVendor: IBMMQ
   # and provide other connection details
-  jmsVendor: IBMMQ
+  jmsVendor: 
   # Provide the name of connection factory class. 
-  jmsConnectionFactory: com.ibm.mq.jms.MQQueueConnectionFactory
+  jmsConnectionFactory: 
   jmsConnectionFactoryInstantiator:
-  jmsQueueName: DEV.QUEUE.1
-  jmsHost: 172.21.69.10
-  jmsPort: 1414
-  jmsConnectionNameList: 172.21.69.10(1414)
+  jmsQueueName: 
+  jmsHost: 
+  jmsPort: 
+  jmsConnectionNameList: 
   # Applicable for IBMMQ
-  jmsChannel: DEV.APP.SVRCONN
-  jmsEnableSsl: false
+  jmsChannel: 
+  jmsEnableSsl: 
   
   # Name of JMS secret if available
-  jmsSecret: b2b-jms-secret
+  jmsSecret: 
   
   # Specify JMS keystore file name including it's path relative to the mounted resources volume location, if applicable.
   # When jmsKeystoreSecret is mentioned, provide the name of the key holding the certificate data.
