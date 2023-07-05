@@ -250,7 +250,7 @@ integrations:
       claims:
         name: itxa-nfs-claim
     sso:
-      host: "itxa.itzroks-664003h6xc-z2t6sc-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
+      host: "i.b2bi-test-cluster-dal10-0defdaa0c51bd4a2dcb024eab4bf04a1-0000.us-south.containers.appdomain.cloud"
       port: 443
       ssl:
         enabled: true
